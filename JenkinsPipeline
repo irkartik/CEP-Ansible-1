@@ -4,7 +4,7 @@ pipeline {
    stages{
       stage('Clone the playbook repo') {
          steps{
-            git branch: 'main', url: 'https://github.com/akshu20791/CEP-Ansible-1'
+            git branch: 'main', url: 'https://github.com/irkartik/CEP-Ansible-1'
          }
       }
       stage('Playbook to build and deploy code') {
