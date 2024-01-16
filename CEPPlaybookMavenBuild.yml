@@ -17,5 +17,5 @@
   - name: change the directory to /tmp/kartik/ and then  Build the dockerfile
     command: chdir=/tmp/kartik docker build -t mycepimage01 .
   - name: Runt he Image to deploy app on the container
-    command: docker run -p 8080:8080 mycepimage01
+    command: docker run -d -p 8080:8080 mycepimage01
     
