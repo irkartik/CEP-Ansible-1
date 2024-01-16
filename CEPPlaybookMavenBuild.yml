@@ -12,12 +12,10 @@
   - name: Execute maven command to build the code
     command: chdir=/tmp/kartik mvn package   # /tmp/kartik/target/addressbook.war
 
-  - name : Clone the Dockerfile from Github
-    git : repo=https://github.com/irkartik/AnsibleDockerdemo.git dest=/tmp/kartik
-
   - name: Start the docker service
     service: name=docker state=started
-  - name: change the directory to /tmp/kartik/dock/AnsibleDockerdemo/ and then  Build the dockerfile
+  - name: change the directory to /tmp/kartik/ and then  Build the dockerfile
     command: chdir=/tmp/kartik docker build -t mycepimage01 .
   - name: Runt he Image to deploy app on the container
     command: docker run -d -P mycepimage01
+    
