@@ -8,7 +8,7 @@
      - maven
      - docker
   - name: Clone the code on the worker nodes from github
-    git: repo=https://github.com/irkartik/DevOpsCodeDemo.git dest=/tmp/kartik
+    git: repo=https://github.com/irkartik/MavenTestCode.git dest=/tmp/kartik
   - name: Execute maven command to build the code
     command: chdir=/tmp/kartik mvn package   # /tmp/kartik/target/addressbook.war
 
